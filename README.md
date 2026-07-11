@@ -2,13 +2,13 @@
 
 A self-hosted Linux homelab designed to explore Linux administration, Docker, storage architecture, networking, and infrastructure engineering.
 
-[![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?logo=ubuntu&logoColor=white)]
-[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff)]
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?logo=ubuntu&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff)
 ![Docker Compose](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
 ![Nextcloud](https://img.shields.io/badge/Nextcloud-0082C9?logo=nextcloud&logoColor=white)
 ![Jellyfin](https://img.shields.io/badge/Jellyfin-00A4DC?logo=jellyfin&logoColor=white)
-[![MariaDB](https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=white)]
+![MariaDB](https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=white)
 ![Tailscale](https://img.shields.io/badge/Tailscale-242424?logo=tailscale&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)
 
