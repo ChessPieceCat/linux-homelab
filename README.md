@@ -73,7 +73,7 @@ Homepage provides a centralized dashboard for managing and accessing every servi
 | Remote Access    | Tailscale                                          |
 | Storage          | NVMe SSD, External NTFS HDD, ext4 filesystem image |
 | Monitoring       | Uptime Kuma                                        |
-| Version Control  | Git, GitHub      
+| Version Control  | Git, GitHub
 
 ## Objectives
 
@@ -123,7 +123,7 @@ Application data is stored outside of containers using bind mounts and Docker vo
 
 The server uses a two-tier storage strategy. The operating system and Docker runtime reside on the internal NVMe SSD for performance purposes, while media and application data are stored on a 2 TB external hard drive for long-term, inexpensive storage..
 
-Nextcloud data is stored on an ext4 filesystem contained within an image file on the NTFS external drive. This provides native Linux filesystem permissions while allowing the external drive to avoid deleting previously stored files through reformatting.
+Nextcloud data is stored on an ext4 filesystem contained within an image file on the NTFS external drive. This provides native Linux filesystem permissions while avoiding the need to reformat the existing external drive and migrate previously stored data.
 
 ### Secure Remote Access
 
@@ -199,6 +199,20 @@ Each application was organized into its own Docker Compose project with dedicate
 - Troubleshooting
 
 ## Lessons Learned
+
+Building this homelab reinforced that designing reliable infrastructure involves far more than simply deploying applications. The most valuable lessons came from troubleshooting the issues encountered.
+
+Key takeaways include:
+
+- Linux filesystems and permissions have a major impact on how applications interact with data. Understanding POSIX permissions was essential when configuring storage for Nextcloud
+
+- Containers should be treated as disposable. Persistent data belongs in bind mounts or Docker volumes to allow for the recreation of services without data loss.
+
+- The separation of services into independent Docker Compose projects improves maintainability and reduces the impact of changes or failures in the system.
+
+- Documenting infrastructure is as important as building it. Comprehensive and coherent documentation are essential to continuous maintenance and expansion. Extensive notes taken throughout development made it possible to produce this documentation and continue improving the homelab over time.
+
+- Designing infrastructure requires balancing simplicity, security, and maintainability. The use of Tailscale for remote access and isolating services into independent projects reduced complexity and improved security and reliability.
 
 ## Future Improvements
 
