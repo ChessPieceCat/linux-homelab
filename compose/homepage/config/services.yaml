@@ -1,0 +1,34 @@
+---
+- Monitoring:
+    - Uptime Kuma:
+        href: http://SERVER_IP:3001
+        description: Monitoring dashboard
+        icon: uptime-kuma.png
+        siteMonitor: http://SERVER_IP:3001
+
+- Cloud:
+    - Nextcloud:
+        href: http://SERVER_IP:8081
+        description: Personal cloud
+        icon: nextcloud.png
+        siteMonitor: http://SERVER_IP:8081
+
+- Storage:
+    - External Drive:
+        description: Media + backups storage
+        icon: harddrive.png
+
+- System:
+    - Home Server:
+        description: Mini PC
+        icon: server.png
+
+- Media:
+    - Jellyfin:
+        href: http://SERVER_IP:8096
+        description: Media server
+        icon: jellyfin.png
+        widget:
+          type: jellyfin
+          url: http://SERVER_IP:8096
+          key: EXAMPLE_KEY

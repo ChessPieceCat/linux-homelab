@@ -1,0 +1,10 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    network_mode: "host"
+    volumes:
+      - /home/tiern/jellyfin/config:/config
+      - /home/tiern/jellyfin/cache:/cache
+      - /mnt/external/media:/media
+    restart: unless-stopped

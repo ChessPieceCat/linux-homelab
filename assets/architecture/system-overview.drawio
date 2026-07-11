@@ -1,0 +1,90 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="ddpU82MtTeyB-gBakxZD">
+    <mxGraphModel dx="1004" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c1" parent="1" style="swimlane;startSize=30;fillColor=#f5f5f5;strokeColor=#cccccc;fontStyle=1;align=center;html=1;rounded=1;" value="Home Server Architecture" vertex="1">
+          <mxGeometry height="480" width="680" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="internet" parent="c1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#eceff1;strokeColor=#607d8b;" value="&lt;b&gt;Internet&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="140" x="270" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tailscale" parent="c1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eaf6;strokeColor=#3f51b5;html=1;" value="&lt;b&gt;Tailscale VPN&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="140" x="270" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="ubuntu" parent="c1" style="swimlane;startSize=40;fillColor=#fbe9e7;strokeColor=#ff5722;html=1;rounded=1;" value="&lt;b&gt;Ubuntu Server 26.04 LTS&lt;/b&gt;&lt;br&gt;HP EliteDesk 800 G6 Mini" vertex="1">
+          <mxGeometry height="240" width="620" x="30" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="docker" parent="ubuntu" style="swimlane;startSize=30;fillColor=#e1f5fe;strokeColor=#0288d1;html=1;rounded=1;" value="&lt;b&gt;Docker Engine&lt;/b&gt;" vertex="1">
+          <mxGeometry height="165" width="580" x="20" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="homepage" parent="docker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b0bec5;html=1;" value="&lt;b&gt;Homepage&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="110" x="20" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="jellyfin" parent="docker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b0bec5;html=1;" value="&lt;b&gt;Jellyfin&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="110" x="150" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="nextcloud" parent="docker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b0bec5;html=1;" value="&lt;b&gt;Nextcloud&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="110" x="280" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="mariadb" parent="docker" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#009688;" value="&lt;b&gt;MariaDB&lt;/b&gt;" vertex="1">
+          <mxGeometry height="45" width="100" x="285" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="uptime" parent="docker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b0bec5;html=1;" value="&lt;b&gt;Uptime Kuma&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="110" x="410" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" parent="1" style="swimlane;startSize=30;fillColor=#f5f5f5;strokeColor=#cccccc;fontStyle=1;align=center;html=1;rounded=1;" value="Storage" vertex="1">
+          <mxGeometry height="340" width="680" x="40" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="ssd" parent="c2" style="swimlane;startSize=30;fillColor=#eceff1;strokeColor=#607d8b;html=1;rounded=1;" value="&lt;b&gt;SSD&lt;/b&gt;" vertex="1">
+          <mxGeometry height="270" width="280" x="30" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="ubuntu_os" parent="ssd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cfd8dc;html=1;" value="Ubuntu OS" vertex="1">
+          <mxGeometry height="50" width="240" x="20" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="docker_storage" parent="ssd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cfd8dc;html=1;" value="Docker" vertex="1">
+          <mxGeometry height="50" width="240" x="20" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="configs" parent="ssd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cfd8dc;html=1;" value="Configs" vertex="1">
+          <mxGeometry height="50" width="240" x="20" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="hdd" parent="c2" style="swimlane;startSize=30;fillColor=#efebe9;strokeColor=#795548;html=1;rounded=1;" value="&lt;b&gt;External HDD&lt;/b&gt;" vertex="1">
+          <mxGeometry height="270" width="280" x="370" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="media_docs" parent="hdd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d7ccc8;html=1;" value="Media Library &amp;amp; Documents" vertex="1">
+          <mxGeometry height="45" width="240" x="20" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="nc_img" parent="hdd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d7ccc8;html=1;" value="nextcloud.img" vertex="1">
+          <mxGeometry height="40" width="240" x="20" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="mounted_ext4" parent="hdd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#efebe9;strokeColor=#8d6e63;html=1;" value="Mounted ext4" vertex="1">
+          <mxGeometry height="40" width="240" x="20" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="nc_data" parent="hdd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#009688;html=1;" value="Nextcloud Data" vertex="1">
+          <mxGeometry height="40" width="240" x="20" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="internet" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#546e7a;strokeWidth=2;" target="tailscale">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="tailscale" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#546e7a;strokeWidth=2;" target="ubuntu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="nextcloud" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#00796b;strokeWidth=2;" target="mariadb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="nc_img" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#795548;strokeWidth=2;" target="mounted_ext4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="mounted_ext4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#795548;strokeWidth=2;" target="nc_data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="nextcloud" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;strokeColor=#009688;strokeWidth=2;fontColor=#004d40;" target="nc_data" value="Mounts Data">
+          <mxGeometry relative="1" x="-0.5384" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

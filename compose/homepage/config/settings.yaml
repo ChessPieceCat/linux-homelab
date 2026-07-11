@@ -1,0 +1,12 @@
+---
+title: Home Server
+
+settings:
+  allowedHosts:
+    - "*"
+
+providers:
+  openweathermap:
+    apiKey: openweathermapkey
+  weatherapi:
+    apiKey: weatherapikey
