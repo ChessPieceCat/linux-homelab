@@ -27,11 +27,11 @@ A self-hosted Linux homelab designed to explore Linux administration, Docker, st
 
 ## Overview
 
-A self-hosted Linux server built to explore modern infrastructure, system administration, and containerized application deployment.
+A self-hosted Linux server built to explore infrastructure, system administration, and containerized application deployment.
 
 This project documents the design, deployment, and maintenance of a homelab running on an HP EliteDesk 800 G6 Mini PC with Ubuntu Server and Docker Compose. The server hosts several services, including personal cloud storage, media streaming, service monitoring, and a centralized dashboard.
 
-The project focuses on designing a maintainable system using persistent storage, containerized services, secure remote access, and documented infrastructure. Challenges involving Linux filesystems, Docker networking, and data persistence were solved to create a reliable self-hosted environment.
+The project focuses on designing a maintainable system using persistent storage, containerized services, secure remote access, and documented infrastructure. Challenges involving Linux filesystems, Docker networking, and data persistence were solved to create a reliable environment.
 
 The repository serves as both documentation for the homelab and a portfolio demonstrating practical experience with Linux, Docker, storage architecture, networking, and infrastructure design.
 
@@ -53,7 +53,7 @@ This homelab currently provides:
 
 ## Dashboard
 
-Homepage provides a centralized dashboard for managing and accessing every self-hosted service from a single interface.
+Homepage provides a centralized dashboard for managing and accessing every service from a single interface.
 
 <p align="center">
     <img src="assets/screenshots/homepage-dashboard.png"
@@ -95,33 +95,25 @@ The homelab consists of several independent services, each deployed as its own D
 
 ### Homepage
 
-Provides a centralized dashboard for accessing and monitoring all self-hosted services from a single interface.
+Provides a centralized dashboard for accessing and monitoring all services from a single interface.
 
 ### Jellyfin
 
-Self-hosted media server for streaming movies, television shows, and other personal media stored on the external drive.
+Media server for streaming movies, television shows, and other media stored on the external drive.
 
 ### Nextcloud
 
 Private cloud storage platform for file synchronization and management. Data is stored on a dedicated ext4 filesystem mounted from an image file to provide Linux-compatible permissions while utilizing external NTFS storage.
 
-### MariaDB
-
-Database backend supporting the Nextcloud application and managing persistent application metadata.
-
 ### Uptime Kuma
 
 Monitors service availability and provides health checks for the homelab environment.
-
-### Docker Compose
-
-Each service is deployed as an independent Docker Compose project, simplifying maintenance, updates, and troubleshooting.
 
 ## Design Decisions
 
 ### Containerized Services
 
-Each application is deployed as an independent Docker Compose project rather than combining all services into a single Compose file. This approach isolates failures, simplifies maintenance, and allows each service to be updated, restarted, or modified independently.
+Each application is deployed as an independent Docker Compose project rather than combining all services into a single Compose file. This isolates failures, simplifies maintenance, and allows each service to be updated, restarted, or modified separately.
 
 ### Persistent Data
 
@@ -129,17 +121,17 @@ Application data is stored outside of containers using bind mounts and Docker vo
 
 ### Storage Architecture
 
-The server uses a two-tier storage strategy. The operating system and Docker runtime reside on the internal NVMe SSD for responsiveness, while media and application data are stored on a 2 TB external hard drive.
+The server uses a two-tier storage strategy. The operating system and Docker runtime reside on the internal NVMe SSD for performance purposes, while media and application data are stored on a 2 TB external hard drive for long-term, inexpensive storage..
 
-Nextcloud data is stored on an ext4 filesystem contained within an image file on the NTFS-formatted external drive. This provides native Linux filesystem permissions while allowing the external drive to remain compatible with other systems when needed.
+Nextcloud data is stored on an ext4 filesystem contained within an image file on the NTFS external drive. This provides native Linux filesystem permissions while allowing the external drive to avoid deleting previously stored files through reformatting.
 
 ### Secure Remote Access
 
-Remote administration is provided through Tailscale instead of exposing services directly to the public Internet. This reduces the attack surface while allowing secure access from trusted devices.
+Remote administration is provided through Tailscale instead of exposing services directly to the public Internet.
 
 ### Service Monitoring
 
-Uptime Kuma continuously monitors the availability of self-hosted services, allowing issues to be detected quickly and verifying that services remain operational after configuration changes or updates.
+Uptime Kuma continuously monitors the availability of services, allowing issues to be detected quickly and verifying that services remain operational after changes or updates.
 
 ### Centralized Dashboard
 
@@ -175,11 +167,11 @@ Persistent bind mounts and Docker volumes were configured for application data, 
 
 **Problem**
 
-Managing multiple self-hosted services can become difficult as the environment grows.
+Managing multiple services can become difficult as the environment grows.
 
 **Solution**
 
-Each application was organized into its own Docker Compose project with dedicated configuration directories, making updates, troubleshooting, and future expansion easier to manage.
+Each application was organized into its own Docker Compose project with dedicated configuration directories. This makes updates, troubleshooting, and future expansion easier.
 
 ## Skills Demonstrated
 
@@ -216,15 +208,9 @@ Each application was organized into its own Docker Compose project with dedicate
 
 - CI/CD deployment
 
-- Infrastructure as Code
-
 - Centralized logging
 
-- Automated monitoring alerts
-
 - Authentication improvements
-
-- High availability experimentation
 
 ## Documentation
 
