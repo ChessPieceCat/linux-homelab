@@ -22,7 +22,7 @@ Separating the operating system from persistent application data allows the serv
 ---
 
 <p align="center">
-    <img src="assets/architecture/storage-overview.svg" alt="Linux Homelab Architecture" width="900">
+    <img src="assets/architecture/storage-overview.drawio.svg" alt="Linux Homelab Architecture" width="900">
 </p>
 
 ---

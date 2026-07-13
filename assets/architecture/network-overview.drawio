@@ -1,0 +1,169 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="IqQ_OMcDImXVWQSvsAyn">
+    <mxGraphModel dx="2338" dy="2994" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;flowchart TD\n  Client[\&quot;Client Device\&quot;]\n  \n  subgraph NetworkLayer [Network Connectivity]\n    Local[\&quot;Local Network\&quot;]\n    VPN[\&quot;Tailscale VPN\&quot;]\n  end\n  \n  Server[\&quot;Ubuntu Server\&quot;]\n  \n  subgraph DockerLayer [Container Environment]\n    Bridge[\&quot;Docker Bridge\&quot;]\n    Host[\&quot;Host Network\&quot;]\n  end\n  \n  Client --&gt; Local\n  Client --&gt; VPN\n  Local --&gt; Server\n  VPN --&gt; Server\n  \n  Server --&gt; Bridge\n  Server --&gt; Host\n  \n  Bridge --&gt; Homepage[\&quot;Homepage\&quot;]\n  Bridge --&gt; Nextcloud[\&quot;Nextcloud\&quot;]\n  Bridge --&gt; Kuma[\&quot;Uptime Kuma\&quot;]\n  Host --&gt; Jellyfin[\&quot;Jellyfin\&quot;]\n\n  style Server fill:#2c3e50,stroke:#34495e,color:#fff\n  style Client fill:#3498db,stroke:#2980b9,color:#fff\n  style Homepage fill:#ecf0f1,stroke:#bdc3c7\n  style Nextcloud fill:#ecf0f1,stroke:#bdc3c7\n  style Kuma fill:#ecf0f1,stroke:#bdc3c7\n  style Jellyfin fill:#ecf0f1,stroke:#bdc3c7\n  style NetworkLayer fill:#f9f9f9,stroke:#ddd\n  style DockerLayer fill:#f9f9f9,stroke:#ddd&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="24">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=20;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Network Connectivity" mermaidId="n:NetworkLayer" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=#f9f9f9;strokeColor=#ddd;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Network Connectivity" id="2">
+          <mxCell parent="24" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=#f9f9f9;strokeColor=#ddd;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="124" width="440" x="-128" y="-1856" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Local Network" mermaidId="n:Local" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Local Network" id="3">
+          <mxCell parent="2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="161" x="35" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Tailscale VPN" mermaidId="n:VPN" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Tailscale VPN" id="4">
+          <mxCell parent="2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="159" x="246" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Container Environment" mermaidId="n:DockerLayer" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=#f9f9f9;strokeColor=#ddd;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Container Environment" id="5">
+          <mxCell parent="24" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=#f9f9f9;strokeColor=#ddd;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="124" width="606" x="-212" y="-1598" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Docker Bridge" mermaidId="n:Bridge" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Docker Bridge" id="6">
+          <mxCell parent="5" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="161" x="35" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Host Network" mermaidId="n:Host" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Host Network" id="7">
+          <mxCell parent="5" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="156" x="415" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Client Device" mermaidId="n:Client" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=#3498db;strokeColor=#2980b9;fontColor=#fff;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Client Device" id="8">
+          <mxCell parent="24" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=#3498db;strokeColor=#2980b9;fontColor=#fff;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="154" x="15" y="-1940" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Ubuntu Server" mermaidId="n:Server" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=#2c3e50;strokeColor=#34495e;fontColor=#fff;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Ubuntu Server" id="9">
+          <mxCell parent="24" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=#2c3e50;strokeColor=#34495e;fontColor=#fff;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="163" x="11" y="-1682" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Homepage" mermaidId="n:Homepage" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=#ecf0f1;strokeColor=#bdc3c7;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Homepage" id="10">
+          <mxCell parent="24" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=#ecf0f1;strokeColor=#bdc3c7;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="138" x="-350" y="-1424" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Nextcloud" mermaidId="n:Nextcloud" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=#ecf0f1;strokeColor=#bdc3c7;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Nextcloud" id="11">
+          <mxCell parent="24" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=#ecf0f1;strokeColor=#bdc3c7;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="131" x="-162" y="-1424" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Uptime Kuma" mermaidId="n:Kuma" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=#ecf0f1;strokeColor=#bdc3c7;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Uptime Kuma" id="12">
+          <mxCell parent="24" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=#ecf0f1;strokeColor=#bdc3c7;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="157" x="19" y="-1424" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Jellyfin" mermaidId="n:Jellyfin" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=#ecf0f1;strokeColor=#bdc3c7;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Jellyfin" id="13">
+          <mxCell parent="24" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=#ecf0f1;strokeColor=#bdc3c7;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="109" x="226" y="-1424" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:Client-&gt;Local#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.14;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="14">
+          <mxCell edge="1" parent="24" source="8" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.14;exitY=1;entryX=0.5;entryY=0;" target="3">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="-13" y="-1861" />
+                <mxPoint x="-13" y="-1836" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:Client-&gt;VPN#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.86;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="15">
+          <mxCell edge="1" parent="24" source="8" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.86;exitY=1;entryX=0.5;entryY=0;" target="4">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="197" y="-1861" />
+                <mxPoint x="197" y="-1836" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:Local-&gt;Server#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.16;entryY=0;" mermaidBaseValue="" id="16">
+          <mxCell edge="1" parent="24" source="3" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.16;entryY=0;" target="9">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="-13" y="-1732" />
+                <mxPoint x="-13" y="-1707" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:VPN-&gt;Server#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.83;entryY=0;" mermaidBaseValue="" id="17">
+          <mxCell edge="1" parent="24" source="4" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.83;entryY=0;" target="9">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="197" y="-1732" />
+                <mxPoint x="197" y="-1707" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:Server-&gt;Bridge#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.91;entryX=0.5;entryY=0;" mermaidBaseValue="" id="18">
+          <mxCell edge="1" parent="24" source="9" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.91;entryX=0.5;entryY=0;" target="6">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="-96" y="-1603" />
+                <mxPoint x="-96" y="-1578" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:Server-&gt;Host#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.91;entryX=0.5;entryY=0;" mermaidBaseValue="" id="19">
+          <mxCell edge="1" parent="24" source="9" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.91;entryX=0.5;entryY=0;" target="7">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="281" y="-1603" />
+                <mxPoint x="281" y="-1578" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:Bridge-&gt;Homepage#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.93;entryX=0.5;entryY=0;" mermaidBaseValue="" id="20">
+          <mxCell edge="1" parent="24" source="6" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.93;entryX=0.5;entryY=0;" target="10">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="-281" y="-1474" />
+                <mxPoint x="-281" y="-1449" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:Bridge-&gt;Nextcloud#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="21">
+          <mxCell edge="1" parent="24" source="6" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="11">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:Bridge-&gt;Kuma#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.91;entryX=0.5;entryY=0;" mermaidBaseValue="" id="22">
+          <mxCell edge="1" parent="24" source="6" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.91;entryX=0.5;entryY=0;" target="12">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="98" y="-1474" />
+                <mxPoint x="98" y="-1449" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:Host-&gt;Jellyfin#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="23">
+          <mxCell edge="1" parent="24" source="7" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="13">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
