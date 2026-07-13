@@ -17,7 +17,7 @@ Most services are exposed only to trusted devices on the local network or throug
 ---
 
 <p align="center">
-    <img src="assets/architecture/network-overview.drawio.svg" alt="Linux Homelab Architecture" width="900">
+    <img src="../assets/architecture/network-overview.drawio.svg" alt="Linux Homelab Architecture" width="900">
 </p>
 
 ---
