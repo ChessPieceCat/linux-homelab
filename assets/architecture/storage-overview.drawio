@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="a3el9EYouQD3nI35PMDO">
+    <mxGraphModel dx="1414" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="w8081Ydo_bvcdERRzMOH-1" parent="1" style="swimlane;startSize=40;fillColor=#f8f9fa;strokeColor=#343a40;fontColor=#212529;fontSize=14;html=1;horizontal=1;pointerEvents=0;whiteSpace=wrap;" value="&lt;b&gt;HP EliteDesk 800 G6 Mini&lt;/b&gt;" vertex="1">
+          <mxGeometry height="540" width="820" x="160" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="w8081Ydo_bvcdERRzMOH-2" parent="w8081Ydo_bvcdERRzMOH-1" style="swimlane;startSize=30;fillColor=#e8f4f8;strokeColor=#0066cc;fontColor=#003366;html=1;pointerEvents=0;whiteSpace=wrap;" value="&lt;b&gt;Internal NVMe SSD&lt;/b&gt;" vertex="1">
+          <mxGeometry height="450" width="370" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w8081Ydo_bvcdERRzMOH-3" parent="w8081Ydo_bvcdERRzMOH-2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbe9e7;strokeColor=#ff5722;fontColor=#d01716;" value="&lt;b&gt;Ubuntu OS&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="140" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="w8081Ydo_bvcdERRzMOH-4" parent="w8081Ydo_bvcdERRzMOH-2" style="swimlane;startSize=24;fillColor=#e1f5fe;strokeColor=#0288d1;fontColor=#01579b;html=1;pointerEvents=0;whiteSpace=wrap;" value="&lt;b&gt;Docker Compose&lt;/b&gt;" vertex="1">
+          <mxGeometry height="290" width="330" x="20" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="w8081Ydo_bvcdERRzMOH-5" parent="w8081Ydo_bvcdERRzMOH-4" style="swimlane;startSize=24;fillColor=#b3e5fc;strokeColor=#03a9f4;fontColor=#01579b;html=1;pointerEvents=0;whiteSpace=wrap;" value="&lt;b&gt;Docker Containers&lt;/b&gt;" vertex="1">
+          <mxGeometry height="230" width="300" x="15" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="w8081Ydo_bvcdERRzMOH-6" parent="w8081Ydo_bvcdERRzMOH-5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#03a9f4;fontColor=#01579b;" value="&lt;b&gt;Nextcloud App&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Web / Application&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="15" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="w8081Ydo_bvcdERRzMOH-7" parent="w8081Ydo_bvcdERRzMOH-5" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#03a9f4;fontColor=#01579b;boundedLbl=1;" value="&lt;b&gt;Nextcloud Data&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;/var/www/html/data&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="w8081Ydo_bvcdERRzMOH-8" parent="w8081Ydo_bvcdERRzMOH-1" style="swimlane;startSize=30;fillColor=#fff0e6;strokeColor=#ff6600;fontColor=#cc3300;html=1;pointerEvents=0;whiteSpace=wrap;" value="&lt;b&gt;External 2 TB HDD&lt;/b&gt;" vertex="1">
+          <mxGeometry height="450" width="370" x="430" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w8081Ydo_bvcdERRzMOH-9" parent="w8081Ydo_bvcdERRzMOH-8" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#fbc02d;fontColor=#f57f17;" value="&lt;b&gt;Media&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Movies / Music&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="100" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="w8081Ydo_bvcdERRzMOH-10" parent="w8081Ydo_bvcdERRzMOH-8" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#fbc02d;fontColor=#f57f17;" value="&lt;b&gt;Documents&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Backups / Archives&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="100" x="250" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="w8081Ydo_bvcdERRzMOH-11" parent="w8081Ydo_bvcdERRzMOH-8" style="shape=mxgraph.flowchart.document;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#f57c00;fontColor=#e65100;" value="&lt;b&gt;nextcloud.img&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Sparse Image File&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="125" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="w8081Ydo_bvcdERRzMOH-12" parent="w8081Ydo_bvcdERRzMOH-8" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#388e3c;fontColor=#1b5e20;" value="&lt;b&gt;ext4 Filesystem&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Loop Device Mount&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="140" x="115" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="w8081Ydo_bvcdERRzMOH-13" edge="1" parent="1" source="w8081Ydo_bvcdERRzMOH-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ff5722;strokeWidth=2;endArrow=classic;" target="w8081Ydo_bvcdERRzMOH-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w8081Ydo_bvcdERRzMOH-14" edge="1" parent="1" source="w8081Ydo_bvcdERRzMOH-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#f57c00;strokeWidth=2;endArrow=classic;" target="w8081Ydo_bvcdERRzMOH-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w8081Ydo_bvcdERRzMOH-15" edge="1" parent="1" source="w8081Ydo_bvcdERRzMOH-12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#388e3c;strokeWidth=2.5;dashed=1;endArrow=classic;fontColor=#1b5e20;labelBackgroundColor=#ffffff;" target="w8081Ydo_bvcdERRzMOH-7" value="&lt;b&gt;Docker Bind Mount&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w8081Ydo_bvcdERRzMOH-16" edge="1" parent="1" source="w8081Ydo_bvcdERRzMOH-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#03a9f4;strokeWidth=2;endArrow=classic;" target="w8081Ydo_bvcdERRzMOH-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
